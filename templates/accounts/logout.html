@@ -1,0 +1,14 @@
+
+{% extends 'base.html' %}
+
+{% block principal %}
+
+<h3>Sesión correctamente cerrada</h3>
+<a href="{% url 'inicio' %}">Iniciar sesión nuevamente</a>
+<script>
+    setTimeout('redi()',3000);
+    function redi(){
+    window.location="{% url 'inicio' %}";
+    }
+</script>
+{% endblock %}

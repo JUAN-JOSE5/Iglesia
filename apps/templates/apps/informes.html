@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block principal %}
+<style>
+        h2{
+        color: black;
+    }
+    </style>
+<h2>Listado de Actividades</h2>
+<div class="table-responsive">
+    <table class="table">
+        <thead>
+                <tr class="thead-dark">
+                     <th scope="col">Actividades</th>
+                     <th scope="col">Mantenimiento P.</th>
+                     <th scope="col">Mantenimiento C.</th>
+                     <th scope="col">Fecha</th>
+                     <th scope="col">Aviso</th>
+                </tr>
+        </thead>
+        <tbody>
+                {% for tabla in object_list  %}
+                    <tr class="thead-light">
+                        <td>{{ tabla.Actividades }}</td>
+                        <td>{{ tabla.MantenimientoP }}</td>
+                        <td>{{ tabla.MantenimientoC }}</td>
+                        <td>{{ tabla.Fecha }}</td>
+                        <td>{{ tabla.FechaViso }}</td>           
+                    </tr>
+                {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}

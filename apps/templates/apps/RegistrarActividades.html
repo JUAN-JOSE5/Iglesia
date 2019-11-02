@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block principal %}
+<style>
+    h2{
+    color: black;
+}
+</style>
+<h2>Nueva Actividad</h2>
+<hr>
+   
+<div id="formdiv">
+
+        <form  action="#" method="post">
+                {% csrf_token %}
+                <div class="form-group">
+                  <label for="id_Actividades">Actividad</label>
+                  <input type="text" class="form-control" id="id_Actividades" placeholder="Digite el nombre de la actividad">
+                </div>
+                <div class="form-group">
+                  <label for="id_MantenimientoP">MantenimientoP</label>
+                  <input type="text" class="form-control" id="id_MantenimientoP" placeholder="Digite el MantenimientoP">
+                </div>
+                <div class="form-group">
+                    <label for="id_MantenimientoC">MantenimientoC</label>
+                    <input type="text" class="form-control" id="id_MantenimientoC" placeholder="Digite el MantenimientoC">
+                </div>
+                <div class="form-group">
+                    <label for="id_Fecha">Fecha</label>
+                    <input type="date" class="form-control" id="id_Fecha" placeholder="Digite la fecha">
+                </div>
+
+                <div class="form-group">
+                    <label for="id_FechaViso">Fecha De Aviso</label>
+                    <input type="date" class="form-control" id="id_FechaViso" placeholder="Digite la fecha de aviso">
+                </div>
+                <div style="text-align: center;">
+                        <button type="submit" class="btn btn-success">Enviar </button>
+                </div>
+                
+        </form>
+    </div>
+
+   
+
+{% endblock %}
